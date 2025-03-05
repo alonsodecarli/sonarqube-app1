@@ -2,5 +2,5 @@ projectKey=teste1
 serverUrl=http://200.195.135.2:18001
 serverVersion=25.2.0.102705
 dashboardUrl=http://200.195.135.2:18001/dashboard?id=teste1
-ceTaskId=b4cfa01d-c52a-4651-a16d-6278817fd1de
-ceTaskUrl=http://200.195.135.2:18001/api/ce/task?id=b4cfa01d-c52a-4651-a16d-6278817fd1de
+ceTaskId=4d3425b5-3791-4728-b2f7-2e93d5f46931
+ceTaskUrl=http://200.195.135.2:18001/api/ce/task?id=4d3425b5-3791-4728-b2f7-2e93d5f46931

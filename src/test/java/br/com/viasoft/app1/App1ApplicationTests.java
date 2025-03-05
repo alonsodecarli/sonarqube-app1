@@ -1,27 +1,24 @@
 package br.com.viasoft.app1;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.util.Assert;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 
 
-@WebMvcTest(App1Application.class)
+@SpringBootTest
 class App1ApplicationTests {
 
 	@Autowired
-	private MockMvc mockMvc;
+	private ApplicationContext applicationContext;
 
 	@Test
 	void contextLoads() {
 		// Teste que verifica se a aplicação inicia sem falhas
 		App1Application.main(new String[]{});
 
-		//Add at least one assertion to this test case.
-		Assert.isTrue(true, "Teste de contexto");
+		// Verifica se o contexto da aplicação foi carregado corretamente
+		assertNotNull(applicationContext, "O contexto da aplicação não deve ser nulo");
 	}
-
-
-
 }

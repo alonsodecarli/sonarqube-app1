@@ -1,21 +1,26 @@
 package br.com.viasoft.app1;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Teste {
 
+    private static final Logger logger = LoggerFactory.getLogger(Teste.class);
 
     public void metodo() {
         // gere um erro critico no sonar
-        System.out.println("Teste");
+        logger.info("Teste");
+
         // Uso inseguro de senha (Security Hotspot)
         String senha2 = "123456";
 
-        System.out.println(senha2);
+        logger.info( String.format("Senha: %s", senha2));
 
-        throw new RuntimeException("Erro crítico intencional para SonarQube");
+        throw new ErroCriticoException("Erro crítico intencional para SonarQube");
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        logger.info("Hello World!");
     }
 
 }
